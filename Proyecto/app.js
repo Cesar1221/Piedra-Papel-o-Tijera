@@ -30,9 +30,9 @@ function convertirLetra(opcion) {
 function ganar(opcionUser, opcionPc) {
     userScore++;
     userScore_span.innerHTML = userScore;
-    const smallUser = "(USER)".fontsize(2);
+    const smallUser = "(Usted)".fontsize(2);
     const samllPc = "(PC)".fontsize(2);
-    result_div.innerHTML = convertirLetra(opcionUser)+smallUser+" le gana a "+convertirLetra(opcionPc)+samllPc+".<br>¡Ganaste!";
+    result_div.innerHTML = convertirLetra(opcionUser)+smallUser+" le gana a "+convertirLetra(opcionPc)+samllPc+".<br>¡Usted Gana! <br>😁";
     const userChoice_div = document.getElementById(opcionUser);
     const pcChoice_div = document.getElementById(opcionPc);
     userChoice_div.classList.add('verde');
@@ -46,9 +46,9 @@ function ganar(opcionUser, opcionPc) {
 function pierda(opcionUser, opcionPc){
     compScore++;
     compScore_span.innerHTML= compScore;
-    const smallUser= "(USER)".fontsize(2);
+    const smallUser= "(Usted)".fontsize(2);
     const smallPc= "(PC)".fontsize(2);
-    result_div.innerHTML= convertirLetra(opcionPc)+smallPc+" le gana a "+convertirLetra(opcionUser)+smallUser+".<br> Tú perdiste";
+    result_div.innerHTML= convertirLetra(opcionPc)+smallPc+" le gana a "+convertirLetra(opcionUser)+smallUser+".<br> Usted Pierde. <br>😯";
     const userChoice_div= document.getElementById(opcionUser);
     const pcChoice_div= document.getElementById(opcionPc);
     userChoice_div.classList.add('rojo');
@@ -60,11 +60,11 @@ function pierda(opcionUser, opcionPc){
 }
 
 function empate(opcionUser) {
-    result_div.innerHTML = "Han elegido "+convertirLetra(opcionUser)+".<br> Empate";
+    result_div.innerHTML = "Han elegido "+convertirLetra(opcionUser)+".<br> Es un Empate. <br>🤔";
     const opcion_div = document.getElementById(opcionUser);
-    opcion_div.classList.add('gris');
+    opcion_div.classList.add('azul');
     setTimeout(function() {
-        opcion_div.classList.remove("gris");
+        opcion_div.classList.remove("azul");
     }, 2000);
 }
 
